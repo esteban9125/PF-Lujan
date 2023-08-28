@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+    background-color: #FFF7D4;
+}
+
+/* Estilo para el header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 15vh;
+    background-color: #FFD95A;
+    position: sticky;
+    top: 0;
+
+}
+
+/* Estilo para el logo */
+.logo-principal {
+    margin-top: 10px;
+    
+}
+
+.logo-principal img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+/* Estilo para el título */
+.titulo {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+/* Estilo para el separador del logo */
+.logo-separador {
+    display: inline-block;
+    width: 60px;
+}
+
+/* Estilo para la barra de navegación */
+.nav {
+    width: 100%;
+    background-color: #4C3D3D;
+
+}
+
+/* Estilo para los enlaces del menú */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.nav li {
+    padding: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.main {
+    padding: 20px;
+}
+
+/* Estilo para la sección de galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galeria div {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+    
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para la sección de ofertas */
+.ofertas {
+    display: inline-table;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-ofertas {
+    font-size: 24px;
+    background-color: #C07F00;
+    padding: 20px;
+}
+
+.oferta {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.oferta img {
+    width: 50%;
+    height: auto;
+ 
+}
+
+.oferta p {
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Estilos para el footer */
+.footer {
+    position: relative;
+    background-color: #4C3D3D;
+    padding: 20px;
+
+}
+
+/* Estilos para el logo del footer */
+.logo-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.logo-footer img {
+    width: 80px;
+    height: auto;
+}
+
+/* Estilos para los íconos de redes sociales */
+.footer i {
+    margin-right: 10px;
+    font-size: 24px;
+
+}
+.footer .fab.fa-whatsapp,
+.fab.fa-instagram,
+.fab.fa-facebook-square {
+    color: white;
+}
+
+/* Estilo para el contenedor sobre nosotros */
+
+.main-2 {
+    display: inline-block;
+    text-align: center;
+}
+
+.titulo-nos {
+    width: 100%;
+    font-size: 24px;
+    background-color: #C07F00;
+    padding: 20px 0 20px 0;
+
+}
+
+.parrafos {
+    width: 30%;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+
+}
+
+.parrafo {
+    padding-right: 20px;
+}
+
+.main-2 img {
+    width: 50%;
+    height: auto;
+
+}
+/* estilo para el contenedor productos */
+.main-3 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.titulo-productos {
+    font-size: 24px;
+    background-color: #C07F00;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.productos{
+    display: block;
+    
+}
+.producto{
+    display: inline-block;
+    background-color: #E5BA73;
+    border: #4C3D3D solid;
+}
+.producto img{
+    width: 50%;
+    height: auto;
+}
+
+.title-dona {
+    font-size: 24px;
+}
+
+
+/* Estilo para el contenedor principal */
+.main-3 {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+.novedades {
+    font-size: 24px;
+    
+    background-color: #C07F00;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+/* Estilo para la sección de novedades */
+.nov {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para cada elemento de novedad */
+.nov > .novedad {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Estilo para el contenido en cada elemento */
+.nov .novedad .contenido {
+    flex: 1;
+}
+
+/* Estilo para la imagen en cada elemento */
+.nov .novedad img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    align-self: flex-end; 
+}
+
+/* estilo para contactos */
+
+.main-4{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    min-height: 900px;
+}
+.contactos{
+    width: 100%;
+    font-size: 24px;
+    background-color: #C07F00;
+    padding: 20px 0 20px 0;
+
+}
+.iconos{
+    padding: 50px;
+}
+.iconos a{
+    text-decoration: none;
+    padding: 20px;
+    top: 20px;
+    background-color: #FFD95A;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+.iconos .fab.fa-whatsapp{ 
+    color: green;
+    font-size: 100px;
+}
+.iconos .fab.fa-instagram{
+    color: red;
+    font-size: 100px;
+}
+.iconos .fab.fab.fa-facebook-square{
+    color: blue;
+    font-size: 100px;
+}

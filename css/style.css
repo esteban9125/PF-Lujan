@@ -20,7 +20,12 @@ body {
     top: 0;
 
 }
-
+.nav-color {
+    background-color:#4C3D3D;
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-between;
+}
 /* Estilo para el logo */
 .logo-principal {
     margin-top: 10px;

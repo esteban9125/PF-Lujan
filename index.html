@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/21a42996e4.js" crossorigin="anonymous"></script>
     <title>King Donuts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,14 +17,35 @@
             <img src="./Recursos/kingDonuts.jpeg" alt="kingDonuts">
         </div>
         <h1 class="titulo">King<span class="logo-separador"></span>Donuts</h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./secciones/sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a href="./secciones/productos.html">Productos</a></li>
-                <li><a href="./secciones/novedades.html">Novedades</a></li>
-                <li><a href="./secciones/contactos.html">Contactos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg nav-color w-100">
+            <div class="container-fluid">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+                    <ul class="navbar-nav fs-4 mw-100">
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./secciones/sobreNosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./secciones/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./secciones/novedades.html">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./secciones/contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex w-25" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="main">
@@ -54,14 +77,17 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="logo-footer"> 
-            <img src="./Recursos/kingDonuts.jpeg" alt="kingDonuts"> 
+        <div class="logo-footer">
+            <img src="./Recursos/kingDonuts.jpeg" alt="kingDonuts">
         </div>
         <a href="https://www.facebook.com/kingdonuts.mendoza"><i class="fab fa-facebook-square"></i></a>
         <a href="https://www.instagram.com/kingdonutsmendoza/"><i class="fab fa-instagram"></i></a>
-        <a href="https://api.whatsapp.com/send/?phone=5492615185592&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=5492615185592&text&type=phone_number&app_absent=0"><i
+                class="fab fa-whatsapp"></i></a>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

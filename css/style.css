@@ -5,9 +5,6 @@
 
 }
 
-body {
-    background-color: #FFF7D4;
-}
 
 /* Estilo para el header */
 .header {
@@ -46,18 +43,49 @@ body {
 .menuHover:hover{
     background-color:#3d2603;
 }
+.main {  
+    background-color: #ecd6b2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.7fr 1.3fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "galeria galeria"
+      "ofertas ofertas";
+  }
+  
+  .galeria {
+    padding: 20px 0 0 0;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-area: galeria; 
+  }
+  
+  .ofertas {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.4fr 1.3fr 1.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "titulo-ofertas titulo-ofertas"
+      "ofer1 ofer2"
+      "ofer3 ofer4"; 
+    grid-area: ofertas; 
+    align-items: center;
+  }
+  .titulo-ofertas {
+    padding: 20px 0;
+    grid-area: titulo-ofertas; }
+  .ofer1 { grid-area: ofer1; }
+  .ofer2 { grid-area: ofer2; }
+  .ofer3 { grid-area: ofer3; }
+  .ofer4 { grid-area: ofer4; }
 
 /* Estilo para la sección de galería */
-.galeria {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.galeria div {
+/* .galeria div {
     flex-basis: calc(25% - 20px); 
-}
+} */
 
 .galeria img {
     width: 100%;
@@ -67,19 +95,16 @@ body {
 
 /* Estilo para la sección de ofertas */
 .ofertas {
-    display: inline-table;
     text-align: center;
 }
 
-.titulo-ofertas {
+.titulo-ofertas h1{
     font-size: 24px;
     background-color: #C07F00;
     padding: 20px;
 }
 
-.oferta {
-    display: inline-block;
-    width: 50%;
+.oferta{
     box-sizing: border-box;
     padding: 10px;
     text-align: center;

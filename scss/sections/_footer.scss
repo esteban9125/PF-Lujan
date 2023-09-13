@@ -1,0 +1,30 @@
+.footer {
+    position: relative;
+    background-color: #4C3D3D;
+    padding: 20px;
+
+    .logo-footer {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+    i {
+        margin-right: 10px;
+        font-size: 24px;
+
+    }
+    .fab.fa-whatsapp,
+    .fab.fa-instagram,
+    .fab.fa-facebook-square {
+        color: white;
+    }
+
+}
+
+
+   

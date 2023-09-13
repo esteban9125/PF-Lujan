@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+    background-color: #FFD95A;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+
+    /* Estilo para el logo */
+    .logo-principal img {
+        max-width: 166px;
+    }
+
+    /* Estilo para el título */
+    .titulo {
+        font-family: 'Yesteryear', cursive;
+        font-size: 8vw;
+        margin: auto;
+    }
+
+    /* estilo de barra de navegacion */
+    .nav-color {
+        background-color: #4C3D3D;
+    }
+
+    .menuHover:hover {
+        background-color: #3d2603;
+    }
+}
+

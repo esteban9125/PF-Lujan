@@ -1,374 +1,170 @@
+@charset "UTF-8";
 * {
-    padding: 0;
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-/* Estilo para el header */
 .header {
-    display: flex;
-    align-items: center;
-    min-height: 15vh;
-    background-color: #FFD95A;
-    position: sticky;
-    top: 0;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  min-height: 15vh;
+  background-color: #FFD95A;
+  position: sticky;
+  top: 0;
+  flex-wrap: wrap;
+  /* Estilo para el logo */
+  /* Estilo para el título */
+  /* estilo de barra de navegacion */
 }
-
-/* Estilo para el logo */
-.logo-principal img {
-    max-width: 166px;
+.header .logo-principal img {
+  max-width: 166px;
 }
-
-/* Estilo para el título */
-.titulo {
-    font-family: 'Yesteryear', cursive;
-    font-size: 8vw;
-    margin: auto;
+.header .titulo {
+  font-family: "Yesteryear", cursive;
+  font-size: 8vw;
+  margin: auto;
 }
-
-/* Estilo para el separador del logo */
-.logo-separador {
-    display: inline-block;
-    width: 60px;
-
+.header .nav-color {
+  background-color: #4C3D3D;
 }
-
-/* estilo de barra de navegacion */
-.nav-color {
-    background-color: #4C3D3D;
-}
-
-.navbar-expand-lg .navbar-collapse {
-    justify-content: space-between;
-}
-
-.menuHover:hover {
-    background-color: #3d2603;
+.header .menuHover:hover {
+  background-color: #3d2603;
 }
 
 .main {
-    background-color: #ecd6b2;
-
+  background-color: #ecd6b2;
+}
+.main .galeria {
+  padding: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-area: galeria;
+}
+.main .galeria img {
+  width: 100%;
+  height: 100%;
+}
+.main .ofertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1.3fr 1.3fr;
+  grid-template-areas: "titulo-ofertas titulo-ofertas" "ofer1 ofer2" "ofer3 ofer4";
+  grid-area: ofertas;
+  align-items: center;
+  text-align: center;
+}
+.main .ofertas .titulo-ofertas {
+  padding: 20px 0;
+  grid-area: titulo-ofertas;
+}
+.main .ofertas .titulo-ofertas h1 {
+  font-size: 30px;
+  background-color: #C07F00;
+  padding: 20px;
+}
+.main .ofertas .oferta {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.main .ofertas .oferta img {
+  width: 50%;
+  height: auto;
+}
+.main .ofertas .oferta p {
+  width: 50%;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.main .ofertas .ofer1 {
+  grid-area: ofer1;
+}
+.main .ofertas .ofer2 {
+  grid-area: ofer2;
+}
+.main .ofertas .ofer3 {
+  grid-area: ofer3;
+}
+.main .ofertas .ofer4 {
+  grid-area: ofer4;
 }
 
-.galeria {
-    padding: 20px 0 0 0;
+@media (max-width: 768px) {
+  .main {
+    /* index media */
+  }
+  .main .galeria {
+    display: none;
+  }
+  .main .ofertas {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-area: galeria;
-}
-
-.ofertas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 1.3fr 1.3fr;
-    grid-template-areas:
-        "titulo-ofertas titulo-ofertas"
-        "ofer1 ofer2"
-        "ofer3 ofer4";
+    grid-template-areas: "titulo-ofertas" "ofer1" "ofer2" "ofer3" "ofer4";
     grid-area: ofertas;
     align-items: center;
-}
-
-.titulo-ofertas {
+  }
+  .main .titulo-ofertas {
     padding: 20px 0;
     grid-area: titulo-ofertas;
-}
-
-.ofer1 {
+  }
+  .main .ofer1 {
     grid-area: ofer1;
-}
-
-.ofer2 {
+  }
+  .main .ofer2 {
     grid-area: ofer2;
-}
-
-.ofer3 {
+  }
+  .main .ofer3 {
     grid-area: ofer3;
-}
-
-.ofer4 {
+  }
+  .main .ofer4 {
     grid-area: ofer4;
+  }
 }
-
-/* Estilo para la sección de galería */
-
-.galeria img {
-    width: 100%;
-    height: 100%;
-
-}
-
-/* Estilo para la sección de ofertas */
-.ofertas {
-    text-align: center;
-}
-
-.titulo-ofertas h1 {
-    font-size: 30px;
-    background-color: #C07F00;
-    padding: 20px;
-}
-
-.oferta {
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
-}
-
-.oferta img {
-    width: 50%;
-    height: auto;
-}
-
-.oferta p {
-    width: 50%;
-    margin: 0;
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Estilos para el footer */
-.footer {
-    position: relative;
-    background-color: #4C3D3D;
-    padding: 20px;
-
-}
-
-/* Estilos para el logo del footer */
-.logo-footer {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-}
-
-.logo-footer img {
-    width: 80px;
-    height: auto;
-}
-
-/* Estilos para los íconos de redes sociales */
-.footer i {
-    margin-right: 10px;
-    font-size: 24px;
-
-}
-
-.footer .fab.fa-whatsapp,
-.fab.fa-instagram,
-.fab.fa-facebook-square {
-    color: white;
-}
-
 /* Estilo para el contenedor sobre nosotros */
-
 .main-2 {
-    background-color: #ecd6b2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1.8fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "Sobre-Nosotros Sobre-Nosotros"
-        "parrafos img-2";
+  background-color: #ecd6b2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "Sobre-Nosotros Sobre-Nosotros" "parrafos img-2";
 }
 
 .Sobre-Nosotros {
-    grid-area: Sobre-Nosotros;
-    background-color: #C07F00;
+  grid-area: Sobre-Nosotros;
+  background-color: #C07F00;
 }
-.Sobre-Nosotros h1{
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
+
+.Sobre-Nosotros h1 {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
 }
 
 .parrafos {
-    grid-area: parrafos;
-    padding: 20px;
+  grid-area: parrafos;
+  padding: 20px;
 }
+
 .parrafos p {
-    padding-top: 20px;
+  padding-top: 20px;
 }
+
 .img-2 {
-    grid-area: img-2;
-    padding: 20px;
+  grid-area: img-2;
+  padding: 20px;
 }
+
 .img-2 img {
-    width: 100%;
+  width: 100%;
 }
 
-/* estilo para el contenedor productos */
-.main-3 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-
-.titulo-productos {
-    font-size: 24px;
-    background-color: #C07F00;
-    width: 100%;
-    padding: 20px 0 20px 0;
-}
-
-.productos {
-    display: block;
-
-}
-
-.producto {
-    display: inline-block;
-    background-color: #E5BA73;
-    border: #4C3D3D solid;
-}
-
-.producto img {
-    width: 50%;
-    height: auto;
-}
-
-.title-dona {
-    font-size: 24px;
-}
-
-
-/* Estilo para el contenedor principal */
-.main-3 {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilo para el título */
-.novedades {
-    font-size: 24px;
-
-    background-color: #C07F00;
-    width: 100%;
-    padding: 20px 0 20px 0;
-}
-
-/* Estilo para la sección de novedades */
-.nov {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Estilo para cada elemento de novedad */
-.nov>.novedad {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-/* Estilo para el contenido en cada elemento */
-.nov .novedad .contenido {
-    flex: 1;
-}
-
-/* Estilo para la imagen en cada elemento */
-.nov .novedad img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-top: 10px;
-    align-self: flex-end;
-}
-
-/* estilo para contactos */
-
-.main-4 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    min-height: 900px;
-}
-
-.contactos {
-    width: 100%;
-    font-size: 24px;
-    background-color: #C07F00;
-    padding: 20px 0 20px 0;
-
-}
-
-.iconos {
-    padding: 50px;
-}
-
-.iconos a {
-    text-decoration: none;
-    padding: 20px;
-    top: 20px;
-    background-color: #FFD95A;
-    margin-left: 20px;
-    border-radius: 4px;
-}
-
-.iconos .fab.fa-whatsapp {
-    color: green;
-    font-size: 100px;
-}
-
-.iconos .fab.fa-instagram {
-    color: red;
-    font-size: 100px;
-}
-
-.iconos .fab.fab.fa-facebook-square {
-    color: blue;
-    font-size: 100px;
-}
-
-/* media queries mobile-last */
-
-@media (max-width: 768px){
-    /* index media */
-    .galeria{
-        display: none;
-    }
-    .ofertas {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 1.3fr 1.3fr;
-        grid-template-areas:
-            "titulo-ofertas"
-            "ofer1" "ofer2"
-            "ofer3" "ofer4";
-        grid-area: ofertas;
-        align-items: center;
-    }
-    
-    .titulo-ofertas {
-        padding: 20px 0;
-        grid-area: titulo-ofertas;
-    }
-    
-    .ofer1 {
-        grid-area: ofer1;
-    }
-    
-    .ofer2 {
-        grid-area: ofer2;
-    }
-    
-    .ofer3 {
-        grid-area: ofer3;
-    }
-    
-    .ofer4 {
-        grid-area: ofer4;
-    }
+@media (max-width: 768px) {
   /* sobreNosotros mediaqueries */
   .main-2 {
     background-color: #ecd6b2;
@@ -377,38 +173,173 @@
     grid-template-rows: 0.1fr 1.9fr 1fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
-    grid-template-areas:
-        "Sobre-Nosotros Sobre-Nosotros"
-        "parrafos parrafos" 
-        "img-2 img-2";
-}
-
-.Sobre-Nosotros {
+    grid-template-areas: "Sobre-Nosotros Sobre-Nosotros" "parrafos parrafos" "img-2 img-2";
+  }
+  .Sobre-Nosotros {
     grid-area: Sobre-Nosotros;
     background-color: #C07F00;
-}
-.Sobre-Nosotros h1{
+  }
+  .Sobre-Nosotros h1 {
     text-align: center;
     font-size: 30px;
     padding: 20px;
-}
-
-.parrafos {
+  }
+  .parrafos {
     grid-area: parrafos;
     padding: 20px;
-}
-.parrafos p {
+  }
+  .parrafos p {
     padding-top: 20px;
-}
-.img-2 {
+  }
+  .img-2 {
     grid-area: img-2;
     padding: 20px;
-}
-.img-2 img {
+  }
+  .img-2 img {
     width: 100%;
+  }
+}
+/* estilo para el contenedor productos */
+.main-3 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
-
-
+.titulo-productos {
+  font-size: 24px;
+  background-color: #C07F00;
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
+.productos {
+  display: block;
+}
+
+.producto {
+  display: inline-block;
+  background-color: #E5BA73;
+  border: #4C3D3D solid;
+}
+
+.producto img {
+  width: 50%;
+  height: auto;
+}
+
+.title-dona {
+  font-size: 24px;
+}
+
+/* Estilo para el contenedor principal */
+.main-3 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo para el título */
+.novedades {
+  font-size: 24px;
+  background-color: #C07F00;
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+
+/* Estilo para la sección de novedades */
+.nov {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para cada elemento de novedad */
+.nov > .novedad {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Estilo para el contenido en cada elemento */
+.nov .novedad .contenido {
+  flex: 1;
+}
+
+/* Estilo para la imagen en cada elemento */
+.nov .novedad img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+/* estilo para contactos */
+.main-4 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  min-height: 900px;
+}
+
+.contactos {
+  width: 100%;
+  font-size: 24px;
+  background-color: #C07F00;
+  padding: 20px 0 20px 0;
+}
+
+.iconos {
+  padding: 50px;
+}
+
+.iconos a {
+  text-decoration: none;
+  padding: 20px;
+  top: 20px;
+  background-color: #FFD95A;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+
+.iconos .fab.fa-whatsapp {
+  color: green;
+  font-size: 100px;
+}
+
+.iconos .fab.fa-instagram {
+  color: red;
+  font-size: 100px;
+}
+
+.iconos .fab.fab.fa-facebook-square {
+  color: blue;
+  font-size: 100px;
+}
+
+.footer {
+  position: relative;
+  background-color: #4C3D3D;
+  padding: 20px;
+}
+.footer .logo-footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.footer .logo-footer img {
+  width: 80px;
+  height: auto;
+}
+.footer i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+.footer .fab.fa-whatsapp,
+.footer .fab.fa-instagram,
+.footer .fab.fa-facebook-square {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

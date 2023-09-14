@@ -1,7 +1,7 @@
 /* Estilo para el contenedor sobre nosotros */
 
 .main-2 {
-    background-color: #ecd6b2;
+    background-color: $fondo;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.2fr 1.8fr;
@@ -11,32 +11,31 @@
     grid-template-areas:
         "Sobre-Nosotros Sobre-Nosotros"
         "parrafos img-2";
+        .Sobre-Nosotros {
+            grid-area: Sobre-Nosotros;
+            background-color: #C07F00;
+            h1{  
+                @extend .titulos;
+                text-align: center;
+            }
+        }
+        .parrafos {
+            grid-area: parrafos;
+            padding: 20px;
+            p {
+                padding-top: 20px;
+            }
+        }
+        .img-2 {
+            grid-area: img-2;
+            padding: 20px;
+            img {
+            width: 100%;
+            }
+        }
 }
 
-.Sobre-Nosotros {
-    grid-area: Sobre-Nosotros;
-    background-color: #C07F00;
-}
-.Sobre-Nosotros h1{
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-}
 
-.parrafos {
-    grid-area: parrafos;
-    padding: 20px;
-}
-.parrafos p {
-    padding-top: 20px;
-}
-.img-2 {
-    grid-area: img-2;
-    padding: 20px;
-}
-.img-2 img {
-    width: 100%;
-}
 
 @media (max-width:768px){
      /* sobreNosotros mediaqueries */
@@ -51,36 +50,36 @@
             "Sobre-Nosotros Sobre-Nosotros"
             "parrafos parrafos"
             "img-2 img-2";
+            .Sobre-Nosotros {
+                grid-area: Sobre-Nosotros;
+                background-color: #C07F00;
+                h1 {
+                   text-align: center;
+                   font-size: 30px;
+                   padding: 20px;
+               }
+            }
+            .parrafos {
+                grid-area: parrafos;
+                padding: 20px;
+                p {
+                padding-top: 20px;
+                }
+            }
+            .img-2 {
+                grid-area: img-2;
+                padding: 20px;
+                img {
+                    width: 100%;
+                }
+            }
     }
 
-    .Sobre-Nosotros {
-        grid-area: Sobre-Nosotros;
-        background-color: #C07F00;
-    }
 
-    .Sobre-Nosotros h1 {
-        text-align: center;
-        font-size: 30px;
-        padding: 20px;
-    }
 
-    .parrafos {
-        grid-area: parrafos;
-        padding: 20px;
-    }
 
-    .parrafos p {
-        padding-top: 20px;
-    }
 
-    .img-2 {
-        grid-area: img-2;
-        padding: 20px;
-    }
 
-    .img-2 img {
-        width: 100%;
-    }
 
 
 }

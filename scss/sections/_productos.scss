@@ -1,80 +1,32 @@
 /* estilo para el contenedor productos */
 .main-3 {
+    background-color: $fondo;
     display: inline-block;
     text-align: center;
     width: 100%;
-}
-
-.titulo-productos {
-    font-size: 24px;
-    background-color: #C07F00;
-    width: 100%;
-    padding: 20px 0 20px 0;
-}
-
-.productos {
-    display: block;
-
-}
-
-.producto {
-    display: inline-block;
-    background-color: #E5BA73;
-    border: #4C3D3D solid;
-}
-
-.producto img {
-    width: 50%;
-    height: auto;
-}
-
-.title-dona {
-    font-size: 24px;
+    .titulo-productos {
+        @extend .titulos;
+    }
+    .productos {
+        display: block;
+        .producto {
+            display: inline-block;
+            background-color: #E5BA73;
+            border: #4C3D3D solid;
+            img {
+                width: 50%;
+                height: auto;
+            }
+            .title-dona {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 
-/* Estilo para el contenedor principal */
-.main-3 {
-    text-align: center;
-    padding: 20px;
-}
 
-/* Estilo para el título */
-.novedades {
-    font-size: 24px;
 
-    background-color: #C07F00;
-    width: 100%;
-    padding: 20px 0 20px 0;
-}
 
-/* Estilo para la sección de novedades */
-.nov {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* Estilo para cada elemento de novedad */
-.nov>.novedad {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px 0;
-}
 
-/* Estilo para el contenido en cada elemento */
-.nov .novedad .contenido {
-    flex: 1;
-}
-
-/* Estilo para la imagen en cada elemento */
-.nov .novedad img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-top: 10px;
-    align-self: flex-end;
-}

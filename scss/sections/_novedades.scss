@@ -1,0 +1,32 @@
+/* Estilo para novedades */
+.main-3 {
+    background-color: $fondo;
+    text-align: center;
+    
+    .novedades {
+        @extend .titulos;
+    }
+    .nov {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .novedad {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            .contenido {
+                flex: 1;
+            }
+            img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                margin-top: 10px;
+                align-self: flex-end;
+            }
+        }
+    }
+}

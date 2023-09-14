@@ -1,8 +1,17 @@
+@import './recursos/tipografia';
+@import './recursos/colors';
 @import './recursos/reset';
+@import './recursos/extend';
+
+
 @import './sections/header';
 @import './sections/main-index';
 @import './sections/sobreNosotros';
 @import './sections/productos';
+@import './sections/novedades';
 @import './sections/contactos';
 @import './sections/footer';
 
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

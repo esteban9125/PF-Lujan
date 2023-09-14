@@ -1,5 +1,5 @@
 .main {
-    background-color: #ecd6b2;
+    background-color: $fondo;
 
     .galeria {
         padding: 20px 0 0 0;
@@ -29,9 +29,7 @@
 
         .titulo-ofertas {
             h1 {
-                font-size: 30px;
-                background-color: #C07F00;
-                padding: 20px;
+                @extend .titulos;
             }
 
             padding: 20px 0;

@@ -44,8 +44,9 @@
 .header .nav-color {
   background-color: #4C3D3D;
 }
-.header .menuHover:hover {
+.header .nav-color li:hover {
   background-color: #3d2603;
+  transition: all 0.7s;
 }
 
 .main {

@@ -22,10 +22,12 @@
     /* estilo de barra de navegacion */
     .nav-color {
         background-color: #4C3D3D;
+       
+        li:hover {
+            background-color: #3d2603;
+            transition: all 0.7s;
+        }
     }
 
-    .menuHover:hover {
-        background-color: #3d2603;
-    }
 }
 

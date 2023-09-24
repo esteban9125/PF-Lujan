@@ -7,7 +7,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.destacar, .main-4 .iconos a:hover {
+.destacar, .main-4 .contenedor .iconos a:hover {
   text-decoration: underline;
   font-weight: bold;
   background-color: #eeb702;
@@ -211,19 +211,32 @@
   width: 100%;
 }
 .main-3 .productos {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .main-3 .productos .producto {
-  display: inline-block;
+  overflow: hidden;
+  max-width: 30%;
+  min-width: 300px;
   background-color: #E5BA73;
-  border: #4C3D3D solid;
+  border-radius: 20px;
+  border: #4C3D3D solid 1px;
+  margin: 50px;
+  transition: all 0.3s;
 }
 .main-3 .productos .producto img {
-  width: 50%;
-  height: auto;
+  margin-top: 10px;
+  max-width: 50%;
 }
 .main-3 .productos .producto .title-dona {
   font-size: 24px;
+}
+.main-3 .productos .producto:hover {
+  transform: scale(1.2);
+  box-shadow: 44px 36px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Estilo para novedades */
@@ -237,24 +250,57 @@
   align-items: center;
 }
 .main-3 .nov .novedad {
+  background-color: rgba(255, 229, 196, 0.994);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: 1px solid #ccc;
+  border-radius: 20px;
   padding: 20px;
   margin: 20px 0;
+  overflow: hidden;
+}
+.main-3 .nov .novedad:nth-child(even) {
+  flex-direction: row-reverse;
 }
 .main-3 .nov .novedad .contenido {
   flex: 1;
+  margin: auto;
+  max-width: 60vw;
+}
+.main-3 .nov .novedad .contenido p {
+  padding: 20px;
+  max-width: 50vw;
+}
+.main-3 .nov .novedad .contenido p:hover {
+  font-size: 1.1rem;
+  color: rgb(64, 50, 11);
 }
 .main-3 .nov .novedad img {
-  width: 100%;
   max-width: 300px;
-  height: auto;
-  margin-top: 10px;
-  align-self: flex-end;
+  transition: all 0.3s;
+}
+.main-3 .nov .novedad img:active {
+  transform: scale(1.5);
+  cursor: pointer;
+  max-width: 400px;
 }
 
+@media (max-width: 1000px) {
+  .main-3 .nov {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-3 .nov .novedad {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-3 .nov .novedad:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+}
 /* estilo para contactos */
 .main-4 {
   background-color: #ecd6b2;
@@ -263,10 +309,19 @@
   width: 100%;
   min-height: 900px;
 }
-.main-4 .iconos {
-  padding: 50px;
+.main-4 .contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.main-4 .iconos a {
+.main-4 .contenedor .iconos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 50px;
+}
+.main-4 .contenedor .iconos a {
   text-decoration: none;
   padding: 20px;
   top: 20px;
@@ -275,15 +330,15 @@
   border-radius: 4px;
   transition: all 0.5s;
 }
-.main-4 .iconos .fab.fa-whatsapp {
+.main-4 .contenedor .iconos .fab.fa-whatsapp {
   color: #008000;
   font-size: 100px;
 }
-.main-4 .iconos .fab.fa-instagram {
+.main-4 .contenedor .iconos .fab.fa-instagram {
   color: #ff0000;
   font-size: 100px;
 }
-.main-4 .iconos .fab.fab.fa-facebook-square {
+.main-4 .contenedor .iconos .fab.fab.fa-facebook-square {
   color: #0000ff;
   font-size: 100px;
 }
@@ -293,14 +348,20 @@
   background-color: #4C3D3D;
   padding: 20px;
 }
-.footer .logo-footer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+.footer .whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
-.footer .logo-footer img {
-  width: 80px;
-  height: auto;
+.footer .whatsapp-icon img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  transition: all 0.3s;
+}
+.footer .whatsapp-icon img:hover {
+  transform: scale(1.2);
 }
 .footer i {
   margin-right: 10px;

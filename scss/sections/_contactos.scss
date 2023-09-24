@@ -5,35 +5,51 @@
     text-align: center;
     width: 100%;
     min-height: 900px;
+
     .contactos {
         @extend .titulos;
     }
-    .iconos {
-        padding: 50px;
-        a {
-            text-decoration: none;
-            padding: 20px;
-            top: 20px;
-            background-color: #FFD95A;
-            margin-left: 20px;
-            border-radius: 4px;
-            transition: all 0.5s;
-            &:hover{
-                @extend .destacar;
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .iconos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 50px;
+
+            a {
+                text-decoration: none;
+                padding: 20px;
+                top: 20px;
+                background-color: #FFD95A;
+                margin-left: 20px;
+                border-radius: 4px;
+                transition: all 0.5s;
+
+                &:hover {
+                    @extend .destacar;
+                }
             }
-        }
-        .fab.fa-whatsapp {
-            color: $verde;
-            font-size: 100px;
-        }
-        .fab.fa-instagram {
-            color: $rojo;
-            font-size: 100px;
-        }
-        .fab.fab.fa-facebook-square {
-            color: $azul;
-            font-size: 100px;
+
+            .fab.fa-whatsapp {
+                color: $verde;
+                font-size: 100px;
+            }
+
+            .fab.fa-instagram {
+                color: $rojo;
+                font-size: 100px;
+            }
+
+            .fab.fab.fa-facebook-square {
+                color: $azul;
+                font-size: 100px;
+            }
         }
     }
 }
-

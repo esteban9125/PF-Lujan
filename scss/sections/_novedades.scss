@@ -29,11 +29,10 @@
                 margin: auto;
                 max-width: 60vw;
                 p{  padding: 20px;
-                    max-width: 50vw;
-                    &:hover{
-                        font-size: 1.1rem;
-                        color: rgb(64, 50, 11);
-                    }
+                    max-width: 50vw;                    
+                    font-size: 1.1rem;
+                    color: rgb(64, 50, 11);
+                
                 }
             }
             img {
@@ -58,9 +57,20 @@
             flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
+            margin: 10px;
             &:nth-child(even) {
                 flex-direction: column-reverse;
               }
+            img {
+                max-width:100%;
+            }
+            .contenido  {
+                max-width: none;
+                p{
+                    max-width: none;
+                }
+            }
+
         }
     }
 }
